@@ -1,4 +1,4 @@
-# `factbook.sql` World Factbook Country Profiles in SQL (Incl. factbook.db - Single-File SQLite Distro)
+# `factbook.sql` World Factbook Country Profiles in SQL (Incl. `factbook.db` - Single-File SQLite Distro)
 
 What's the World Factbook?
 
@@ -28,11 +28,11 @@ CREATE TABLE "facts"(
   ------------------------
   -- People and Society
 
-  "population" integer,
+  "population"        integer,
   "population_growth" float,
-  "birth_rate" float,
-  "death_rate" float,
-  "migration_rate" float,
+  "birth_rate"        float,
+  "death_rate"        float,
+  "migration_rate"    float,
   
   ... )
 ```
@@ -42,26 +42,46 @@ CREATE TABLE "facts"(
 
 ## Usage
 
-Find the ten largest country by area:
+Find the ten largest countries by area:
 
 ```sql
-SELECT name, area FROM facts ORDER BY area LIMIT 10;
+SELECT name, area FROM facts ORDER BY area DESC LIMIT 10;
 ```
 
 Resulting in:
 
 ```
+Russia         | 17_098_242
+Canada         |  9_984_670
+United States  |  9_826_675
+China          |  9_596_960
+Brazil         |  8_515_770
+Australia      |  7_741_220
+European Union |  4_324_782
+India          |  3_287_263
+Argentina      |  2_780_400
+Kazakhstan     |  2_724_900
 ```
 
 Find the ten largest countries by population:
 
 ```sql
-SELECT name, population FROM facts ORDER BY population LIMIT 10;
+SELECT name, population FROM facts ORDER BY population DESC LIMIT 10;
 ```
 
 Resulting in:
 
 ```
+World          | 7_256_490_011
+China          | 1_367_485_388
+India          | 1_251_695_584
+European Union |   513_949_445
+United States  |   321_368_864
+Indonesia      |   255_993_674
+Brazil         |   204_259_812
+Pakistan       |   199_085_847
+Nigeria        |   181_562_056
+Bangladesh     |   168_957_745
 ```
 
 And so on.
@@ -70,7 +90,7 @@ And so on.
 ## `factbook.db` - Single-File SQLite Distribution
 
 Download a copy of a pre-build single-file SQLite database, that is, `factbook.db`.
-See the release page.
+See the [release page](releases).
 
 
 ## Build Your Own Up-to-Date SQL Database
