@@ -90,7 +90,7 @@ And so on.
 ## `factbook.db` - Single-File SQLite Distribution
 
 Download a copy of a pre-build single-file SQLite database, that is, `factbook.db`.
-See the [release page](releases).
+See the [release page](https://github.com/factbook/factbook.sql/releases).
 
 
 ## Build Your Own Up-to-Date SQL Database
